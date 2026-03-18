@@ -7,3 +7,28 @@ body {
   padding: 1rem;
   font-family: Arial, sans-serif;
 }
+
+.game-container {
+  display: grid;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.opponent-area,
+.player-area,
+.controls-area,
+.pile {
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.table-area {
+  display: flex;
+  gap: 1rem;
+}
+
+.pile {
+  min-width: 120px;
+  text-align: center;
+}

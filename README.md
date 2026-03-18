@@ -42,7 +42,7 @@ The AI agent should pick ONE unchecked task and implement it.
 ## Core Setup
 
 - [x] Create base HTML layout
-- [ ] Add game container UI
+- [x] Add game container UI
 - [ ] Create basic CSS styling
 - [ ] Initialize JavaScript game object
 
