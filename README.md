@@ -42,16 +42,16 @@ The AI agent should pick ONE unchecked task and implement it.
 ## Core Setup
 
 - [x] Create base HTML layout
-- [ ] Add game container UI
-- [ ] Create basic CSS styling
-- [ ] Initialize JavaScript game object
+- [x] Add game container UI
+- [x] Create basic CSS styling
+- [x] Initialize JavaScript game object
 
 ## Deck System
 
-- [ ] Create UNO deck generator (108 cards)
-- [ ] Shuffle deck function
-- [ ] Create draw pile
-- [ ] Create discard pile
+- [x] Create UNO deck generator (108 cards)
+- [x] Shuffle deck function
+- [x] Create draw pile
+- [x] Create discard pile
 
 ## Player System
 

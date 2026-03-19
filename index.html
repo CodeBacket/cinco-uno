@@ -7,13 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="app-header">
     <h1>UNO Card Game</h1>
   </header>
 
-  <main>
-    <section aria-label="Game area">
-      <p>Game board will be rendered here.</p>
+  <main class="game-container">
+    <section class="game-board" aria-label="Game area">
+      <div class="pile-row">
+        <article class="pile-panel" aria-label="Draw pile panel">
+          <h2>Draw Pile</h2>
+          <p id="draw-pile-count">0 cards</p>
+        </article>
+
+        <article class="pile-panel" aria-label="Discard pile panel">
+          <h2>Discard Pile</h2>
+          <p id="discard-top-card">No card</p>
+        </article>
+      </div>
+
+      <section class="status-panel" aria-label="Game status panel">
+        <h2>Game Status</h2>
+        <p id="deck-size">Deck: 0 cards</p>
+        <p id="game-message">Waiting to initialize game.</p>
+      </section>
     </section>
   </main>
 
