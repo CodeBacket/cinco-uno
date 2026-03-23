@@ -12,8 +12,24 @@
   </header>
 
   <main>
-    <section aria-label="Game area">
-      <p>Game board will be rendered here.</p>
+    <section class="game-board" aria-label="Game area">
+      <h2>Player System Demo</h2>
+      <p id="status-text" class="status-text" role="status" aria-live="polite">
+        Initializing game...
+      </p>
+
+      <div class="counters" aria-label="Card counters">
+        <p><strong>Draw pile:</strong> <span id="draw-count">0</span></p>
+        <p><strong>CPU hand:</strong> <span id="cpu-count">0</span></p>
+        <p><strong>Your hand:</strong> <span id="player-count">0</span></p>
+      </div>
+
+      <div class="player-hand-area">
+        <h3>Your Hand</h3>
+        <div id="player-hand" class="player-hand" aria-label="Player hand"></div>
+      </div>
+
+      <button id="draw-button" type="button">Draw Card</button>
     </section>
   </main>
 

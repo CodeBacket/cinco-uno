@@ -55,10 +55,10 @@ The AI agent should pick ONE unchecked task and implement it.
 
 ## Player System
 
-- [ ] Create player object
-- [ ] Deal 7 cards to each player
-- [ ] Render player hand
-- [ ] Implement draw card action
+- [x] Create player object
+- [x] Deal 7 cards to each player
+- [x] Render player hand
+- [x] Implement draw card action
 
 ## Card Rendering
 
