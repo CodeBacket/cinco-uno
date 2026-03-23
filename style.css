@@ -6,4 +6,73 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #1d1d1d;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+.game-board {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+}
+
+.status {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.counters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.counter {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #f3f3f3;
+}
+
+.player-hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 90px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 60px;
+  height: 84px;
+  border-radius: 8px;
+  border: 1px solid #222222;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+#draw-button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background: #0f62fe;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#draw-button:disabled {
+  background: #8f8f8f;
+  border-color: #8f8f8f;
+  cursor: not-allowed;
 }
