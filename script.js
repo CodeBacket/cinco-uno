@@ -125,8 +125,6 @@
 
     if (!hasPlayableCard(currentPlayer.hand, getTopCard())) {
       addLog(`${currentPlayer.name} has no playable card and must draw.`);
-      drawCard(gameState.currentPlayerIndex);
-      return;
     }
 
     updateUI();
@@ -166,6 +164,11 @@
   function drawCard(playerIndex) {
     const currentPlayer = getCurrentPlayer();
     if (!currentPlayer || playerIndex !== gameState.currentPlayerIndex || gameState.turnLocked) {
+      return false;
+    }
+
+    if (hasPlayableCard(currentPlayer.hand, getTopCard())) {
+      addLog(`${currentPlayer.name} cannot draw while a playable card exists.`);
       return false;
     }
 
@@ -250,7 +253,7 @@
       handContainer.appendChild(buildCardButton(card, cardIndex, playableIndexes.has(cardIndex)));
     });
 
-    drawButton.disabled = gameState.turnLocked;
+    drawButton.disabled = gameState.turnLocked || hasPlayableCard(currentPlayer.hand, topCard);
     drawButton.onclick = () => {
       drawCard(gameState.currentPlayerIndex);
     };
