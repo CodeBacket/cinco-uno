@@ -6,4 +6,69 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #1b1f24;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.game-area {
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+#turn-indicator {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.pile-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.pile-status {
+  min-width: 150px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-button {
+  border: 1px solid #8c959f;
+  border-radius: 6px;
+  background: #f6f8fa;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+}
+
+.card-button.playable {
+  border-color: #1a7f37;
+  background: #dafbe1;
+}
+
+.card-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.game-log {
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  background: #f6f8fa;
 }
