@@ -42,50 +42,50 @@ The AI agent should pick ONE unchecked task and implement it.
 ## Core Setup
 
 - [x] Create base HTML layout
-- [ ] Add game container UI
-- [ ] Create basic CSS styling
-- [ ] Initialize JavaScript game object
+- [x] Add game container UI
+- [x] Create basic CSS styling
+- [x] Initialize JavaScript game object
 
 ## Deck System
 
-- [ ] Create UNO deck generator (108 cards)
-- [ ] Shuffle deck function
-- [ ] Create draw pile
-- [ ] Create discard pile
+- [x] Create UNO deck generator (108 cards)
+- [x] Shuffle deck function
+- [x] Create draw pile
+- [x] Create discard pile
 
 ## Player System
 
-- [ ] Create player object
-- [ ] Deal 7 cards to each player
-- [ ] Render player hand
-- [ ] Implement draw card action
+- [x] Create player object
+- [x] Deal 7 cards to each player
+- [x] Render player hand
+- [x] Implement draw card action
 
 ## Card Rendering
 
-- [ ] Create card component UI
-- [ ] Render card colors
-- [ ] Render card numbers
-- [ ] Render special cards (skip, reverse, draw two)
+- [x] Create card component UI
+- [x] Render card colors
+- [x] Render card numbers
+- [x] Render special cards (skip, reverse, draw two)
 
 ## Gameplay Logic
 
-- [ ] Implement turn system
-- [ ] Validate playable cards
-- [ ] Play card to discard pile
-- [ ] Draw card when no playable card
+- [x] Implement turn system
+- [x] Validate playable cards
+- [x] Play card to discard pile
+- [x] Draw card when no playable card
 
 ## Special Cards
 
-- [ ] Implement Skip card
-- [ ] Implement Reverse card
-- [ ] Implement Draw Two card
-- [ ] Implement Wild card
+- [x] Implement Skip card
+- [x] Implement Reverse card
+- [x] Implement Draw Two card
+- [x] Implement Wild card
 
 ## Win Condition
 
-- [ ] Detect when player has 1 card (UNO)
-- [ ] Detect win condition
-- [ ] Display winner message
+- [x] Detect when player has 1 card (UNO)
+- [x] Detect win condition
+- [x] Display winner message
 
 ---
 
@@ -106,6 +106,44 @@ The project must follow these rules:
 1. Clone the repository
 2. Open `index.html` in a browser
 3. Open the browser console for debugging
+
+---
+
+# Game Features
+
+## Special Cards Implementation
+
+### Skip Card (⊘)
+- When played, the next player's turn is skipped
+- Available in all four colors (2 per color)
+
+### Reverse Card (⟲)
+- Reverses the direction of play
+- In a 2-player game, acts like a Skip card
+- Available in all four colors (2 per color)
+
+### Draw Two Card (+2)
+- Forces the next player to draw 2 cards and lose their turn
+- Available in all four colors (2 per color)
+
+### Wild Card (W)
+- Can be played on any card
+- Player chooses the color for the next play
+- 4 Wild cards in the deck
+
+### Wild Draw Four Card (+4)
+- Can be played on any card
+- Forces the next player to draw 4 cards and lose their turn
+- Player chooses the color for the next play
+- 4 Wild Draw Four cards in the deck
+
+## Gameplay
+
+- 4 players (1 human, 3 CPU)
+- Each player starts with 7 cards
+- Match cards by color, number, or type
+- Draw a card if you can't play
+- First player to empty their hand wins!
 
 ---
 
