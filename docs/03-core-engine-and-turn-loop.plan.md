@@ -27,7 +27,7 @@ Encode the rules from [01-product-rules-and-architecture.plan.md](01-product-rul
 ## Affected areas
 
 - [uno-game/js/engine.js](uno-game/js/engine.js)
-- [uno-game/js/state.js](uno-game/js/state.js) (optional types/helpers)
+- [uno-game/js/state.js](uno-game/js/state.js) (shared constants/contracts)
 - Unit tests optional: if repo has no test runner, use dev-only `engine.selfTest()` guarded by query flag (document in plan 05).
 
 ## Implementation plan
@@ -50,6 +50,17 @@ Encode the rules from [01-product-rules-and-architecture.plan.md](01-product-rul
 9. **Draw**: if no legal play, player may draw one; if drawn card is playable, optional immediate play rule—**v1**: allow pass only after draw (player may play drawn card or click “Pass” if still no play—simpler: **after draw, if playable, player gets one chance to play it or ends turn**). Document chosen rule in code comment and Open Questions if ambiguous.
 10. **Round end**: when hand empty, emit terminal flag in result `{ roundWinner: seatIndex }`.
 11. **Events array**: push structured events for UI (`{ type, payload }`) for each mutation.
+    - Use `EVENT_TYPES` from `uno-game/js/state.js` as the source of truth for names.
+    - Required v1 event keys:
+      - `PHASE_CHANGED`
+      - `TURN_CHANGED`
+      - `CARD_PLAYED`
+      - `CARD_DRAWN`
+      - `WILD_COLOR_CHOSEN`
+      - `PENALTY_APPLIED`
+      - `DISCARD_RESHUFFLED`
+      - `ROUND_WON`
+      - `ERROR`
 
 ## Risks / edge cases
 
