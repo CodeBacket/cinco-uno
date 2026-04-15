@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinco UNO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="screen-setup" aria-labelledby="setup-title">
+      <h1 id="setup-title">Cinco UNO</h1>
+      <p class="setup-copy">Play one human seat against 1-5 computer opponents.</p>
+
+      <label for="ai-count">Computer opponents</label>
+      <select id="ai-count" name="ai-count">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <button id="start-game" type="button">Start game</button>
+    </section>
+
+    <section id="screen-game" hidden aria-labelledby="game-title">
+      <h2 id="game-title">Game table</h2>
+      <p>Gameplay UI is scaffolded and will be wired in later plans.</p>
+    </section>
+
+    <p id="announcer" role="status" aria-live="polite" class="sr-only"></p>
+  </main>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
