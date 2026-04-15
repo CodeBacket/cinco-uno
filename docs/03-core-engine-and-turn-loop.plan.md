@@ -30,6 +30,20 @@ Encode the rules from [01-product-rules-and-architecture.plan.md](01-product-rul
 - [uno-game/js/state.js](uno-game/js/state.js) (optional types/helpers)
 - Unit tests optional: if repo has no test runner, use dev-only `engine.selfTest()` guarded by query flag (document in plan 05).
 
+## Event vocabulary (agreed baseline)
+
+The engine/controller event names below are the shared contract with UI consumers:
+
+- `PHASE_CHANGED`
+- `TURN_CHANGED`
+- `CARD_PLAYED`
+- `CARD_DRAWN`
+- `WILD_COLOR_CHOSEN`
+- `PENALTY_APPLIED`
+- `DISCARD_RESHUFFLED`
+- `ROUND_WON`
+- `ERROR`
+
 ## Implementation plan
 
 1. **Constants**: `COLORS`, `VALUES`, `HAND_SIZE`, `MAX_PLAYERS` derived from `1 human + MAX_AI`.
