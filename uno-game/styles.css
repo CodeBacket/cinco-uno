@@ -1,0 +1,63 @@
+:root {
+  --color-bg: #111722;
+  --color-surface: #1d2738;
+  --color-text: #f4f7ff;
+  --color-accent: #3c89ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app-shell {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+#screen-setup,
+#screen-game {
+  padding: 1rem;
+  border: 1px solid #2b3445;
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+}
+
+label,
+select,
+button {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.4rem;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+}
+
+.setup-copy {
+  margin-top: 0.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
