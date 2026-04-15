@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+  --surface: #f6f7fb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--surface);
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+main {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
