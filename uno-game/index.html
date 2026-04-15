@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinco UNO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="screen-setup" aria-labelledby="setup-title">
+      <h1 id="setup-title">Cinco UNO</h1>
+      <p>Choose how many computer opponents you want to face.</p>
+      <label for="ai-count">Computer opponents</label>
+      <select id="ai-count" name="ai-count">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button id="start-game" type="button">Start game</button>
+    </section>
+
+    <section id="screen-game" hidden aria-labelledby="game-title">
+      <h2 id="game-title">Table</h2>
+      <div id="status-bar" aria-live="polite">Waiting to start.</div>
+      <div id="table-area">
+        <button id="draw-pile" type="button">Draw pile</button>
+        <div id="discard-pile" aria-label="Discard pile"></div>
+      </div>
+      <div id="players-row" aria-label="Computer players"></div>
+      <div id="human-area">
+        <h3>Your hand</h3>
+        <div id="human-hand"></div>
+      </div>
+      <div id="wild-picker" hidden>
+        <p>Choose wild color:</p>
+        <button type="button" data-color="red">Red</button>
+        <button type="button" data-color="yellow">Yellow</button>
+        <button type="button" data-color="green">Green</button>
+        <button type="button" data-color="blue">Blue</button>
+      </div>
+      <div id="announcer" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
