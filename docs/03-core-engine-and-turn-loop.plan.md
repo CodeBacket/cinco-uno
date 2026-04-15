@@ -51,6 +51,20 @@ Encode the rules from [01-product-rules-and-architecture.plan.md](01-product-rul
 10. **Round end**: when hand empty, emit terminal flag in result `{ roundWinner: seatIndex }`.
 11. **Events array**: push structured events for UI (`{ type, payload }`) for each mutation.
 
+### Agreed event vocabulary (from plan 01)
+
+Use these uppercase event type strings as the shared baseline between engine, controller, and UI layers:
+
+- `PHASE_CHANGED`
+- `TURN_CHANGED`
+- `CARD_PLAYED`
+- `CARD_DRAWN`
+- `WILD_COLOR_CHOSEN`
+- `PENALTY_APPLIED`
+- `DISCARD_RESHUFFLED`
+- `ROUND_WON`
+- `ERROR`
+
 ## Risks / edge cases
 
 - **Two-player reverse**: must match Mattel-style behavior.
