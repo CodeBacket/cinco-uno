@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinco UNO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Cinco UNO</h1>
+    <p class="app-subtitle">Phase 01 architecture scaffold</p>
+  </header>
+
+  <main class="app-shell" aria-label="Cinco UNO app shell">
+    <section class="panel panel-menu" aria-label="Game setup menu">
+      <h2>Menu</h2>
+      <p>Select AI opponent count and start the round.</p>
+      <label for="ai-count">AI opponents</label>
+      <input id="ai-count" name="ai-count" type="number" min="1" max="5" value="1">
+      <button type="button" disabled>Start game (stub)</button>
+    </section>
+
+    <section class="panel panel-table" aria-label="Game table">
+      <h2>Table</h2>
+      <p>Controller, engine, AI, and UI wiring will be implemented in later phases.</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Ticket #31 scaffold contract</small>
+  </footer>
+
+  <script src="./js/state.js"></script>
+  <script src="./js/engine.js"></script>
+  <script src="./js/ai.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
