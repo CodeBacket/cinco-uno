@@ -1,114 +1,16 @@
-# UNO Card Game (Vanilla JS)
+# Cinco UNO — implementation plans
 
-This project implements a simple browser-based UNO card game using only:
+This folder contains phased **planning-only** documents for a single-page UNO game: one human player plus a user-selected number of computer opponents, built with plain HTML, CSS, and JavaScript (no framework required).
 
-- HTML
-- CSS
-- JavaScript (Vanilla)
+The playable build lives in [`uno-game/`](uno-game/). See [`uno-game/README.md`](uno-game/README.md) for how to run it locally.
 
-No frameworks or build tools are used.
+Read the plans in order; each file assumes decisions and interfaces from earlier phases.
 
-The goal of the project is to implement the core mechanics of UNO in small incremental tasks.
+| Order | Document | Summary |
+|-------|----------|---------|
+| 1 | [01-product-rules-and-architecture.plan.md](docs/01-product-rules-and-architecture.plan.md) | Product rules, game states, architecture, folder layout |
+| 2 | [02-ui-html-css.plan.md](docs/02-ui-html-css.plan.md) | HTML structure, CSS layout, accessibility |
+| 3 | [03-core-engine-and-turn-loop.plan.md](docs/03-core-engine-and-turn-loop.plan.md) | Deck, rules engine, turn loop, legal moves |
+| 4 | [04-multi-opponent-and-ai.plan.md](docs/04-multi-opponent-and-ai.plan.md) | Selectable AI count, seating, AI behavior |
+| 5 | [05-qa-polish-and-ship.plan.md](docs/05-qa-polish-and-ship.plan.md) | Master test matrix, polish, shipping checklist |
 
-The game should run simply by opening `index.html` in the browser.
-
----
-
-# Project Structure
-
-/uno-game
-index.html
-style.css
-script.js
-README.md
-
-# Game Goal
-
-Implement a playable UNO card game with:
-
-- deck generation
-- card rendering
-- player hands
-- draw pile
-- discard pile
-- basic UNO rules
-
----
-
-# Task List
-
-The AI agent should pick ONE unchecked task and implement it.
-
-## Core Setup
-
-- [x] Create base HTML layout
-- [ ] Add game container UI
-- [ ] Create basic CSS styling
-- [ ] Initialize JavaScript game object
-
-## Deck System
-
-- [ ] Create UNO deck generator (108 cards)
-- [ ] Shuffle deck function
-- [ ] Create draw pile
-- [ ] Create discard pile
-
-## Player System
-
-- [ ] Create player object
-- [ ] Deal 7 cards to each player
-- [ ] Render player hand
-- [ ] Implement draw card action
-
-## Card Rendering
-
-- [ ] Create card component UI
-- [ ] Render card colors
-- [ ] Render card numbers
-- [ ] Render special cards (skip, reverse, draw two)
-
-## Gameplay Logic
-
-- [ ] Implement turn system
-- [ ] Validate playable cards
-- [ ] Play card to discard pile
-- [ ] Draw card when no playable card
-
-## Special Cards
-
-- [ ] Implement Skip card
-- [ ] Implement Reverse card
-- [ ] Implement Draw Two card
-- [ ] Implement Wild card
-
-## Win Condition
-
-- [ ] Detect when player has 1 card (UNO)
-- [ ] Detect win condition
-- [ ] Display winner message
-
----
-
-# Development Rules
-
-The project must follow these rules:
-
-- Use only **HTML, CSS, and vanilla JavaScript**
-- No frameworks (React, Vue, Angular, etc.)
-- No external dependencies
-- Code must run directly in the browser
-- Keep code simple and readable
-
----
-
-# How to Run
-
-1. Clone the repository
-2. Open `index.html` in a browser
-3. Open the browser console for debugging
-
----
-
-# Goal
-
-The final result should be a simple playable UNO game in the browser.
