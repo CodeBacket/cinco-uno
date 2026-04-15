@@ -49,7 +49,7 @@ Encode the rules from [01-product-rules-and-architecture.plan.md](01-product-rul
    - Wild4: next draws 4, loses turn after color choice.
 9. **Draw**: if no legal play, player may draw one; if drawn card is playable, optional immediate play rule—**v1**: allow pass only after draw (player may play drawn card or click “Pass” if still no play—simpler: **after draw, if playable, player gets one chance to play it or ends turn**). Document chosen rule in code comment and Open Questions if ambiguous.
 10. **Round end**: when hand empty, emit terminal flag in result `{ roundWinner: seatIndex }`.
-11. **Events array**: push structured events for UI (`{ type, payload }`) for each mutation.
+11. **Events array**: push structured events for UI (`{ type, payload }`) for each mutation, and use `EVENT_TYPES` exported by `uno-game/js/state.js` as the canonical event vocabulary source.
 
 ## Risks / edge cases
 
