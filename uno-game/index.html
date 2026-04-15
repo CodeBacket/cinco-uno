@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinco UNO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Cinco UNO</h1>
+    <p class="tagline">Human vs configurable AI opponents.</p>
+  </header>
+
+  <main class="app-shell" aria-live="polite">
+    <section id="menu-panel" aria-label="Game setup">
+      <h2>Game Setup</h2>
+      <p>Choose AI count and start a round.</p>
+    </section>
+
+    <section id="table-panel" aria-label="UNO table">
+      <h2>Table</h2>
+      <p>Round state and player hands render here in later phases.</p>
+    </section>
+  </main>
+
+  <script defer src="./js/state.js"></script>
+  <script defer src="./js/engine.js"></script>
+  <script defer src="./js/ai.js"></script>
+  <script defer src="./js/ui.js"></script>
+  <script defer src="./js/main.js"></script>
+</body>
+</html>
