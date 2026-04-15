@@ -1,0 +1,74 @@
+:root {
+  --color-red: #d43d3d;
+  --color-yellow: #f0c419;
+  --color-green: #2f9e44;
+  --color-blue: #2b66d9;
+  --color-surface: #111827;
+  --color-panel: #1f2937;
+  --color-text: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  color: var(--color-text);
+  background: radial-gradient(circle at center, #1f2937 0%, #111827 100%);
+}
+
+.app-shell {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+#screen-setup,
+#screen-game {
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  background: var(--color-panel);
+  padding: 1rem;
+}
+
+#table-area {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+#draw-pile,
+#discard-pile {
+  width: 8rem;
+  min-height: 11rem;
+  border-radius: 0.75rem;
+  border: 2px dashed #64748b;
+  background: #0f172a;
+}
+
+#players-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+#human-hand {
+  min-height: 11rem;
+  border: 2px dashed #64748b;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+#wild-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+}
