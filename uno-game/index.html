@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinco UNO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app" id="app-root">
+    <section id="screen-setup" aria-labelledby="setup-title">
+      <h1 id="setup-title">Cinco UNO</h1>
+      <p class="rules-blurb">
+        Play one round against computer opponents. Match color or value, use action cards wisely, and be first to empty your hand.
+      </p>
+      <div class="setup-controls">
+        <label for="ai-count">Computer opponents</label>
+        <select id="ai-count" name="ai-count">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button id="start-game" type="button">Start game</button>
+      </div>
+    </section>
+
+    <section id="screen-game" hidden aria-labelledby="game-title">
+      <h2 id="game-title" class="visually-hidden">Game table</h2>
+
+      <div id="status-bar" aria-live="polite">
+        <span id="turn-label">Turn: You</span>
+        <span id="direction-label">Direction: Clockwise</span>
+      </div>
+
+      <section id="players-row" aria-label="Computer players"></section>
+
+      <section id="table-area" aria-label="Table controls and piles">
+        <div class="pile" id="draw-pile" aria-label="Draw pile">
+          <span class="pile-title">Draw</span>
+          <span id="draw-count">0 cards</span>
+        </div>
+
+        <div class="pile" id="discard-pile" aria-label="Discard pile">
+          <span class="pile-title">Discard</span>
+          <span id="discard-top">-</span>
+        </div>
+
+        <div id="table-controls">
+          <button id="draw-button" type="button">Draw</button>
+          <button id="pass-button" type="button" hidden>Pass</button>
+        </div>
+      </section>
+
+      <section id="human-area" aria-label="Your cards">
+        <div id="human-panel" class="player human" data-seat="0">
+          <span class="player-name">You</span>
+          <span class="hand-count" id="human-count">0 cards</span>
+        </div>
+        <div id="human-hand" role="list" aria-label="Your hand"></div>
+      </section>
+
+      <div id="wild-picker" role="dialog" aria-modal="true" aria-labelledby="wild-picker-title" hidden>
+        <p id="wild-picker-title">Choose a color</p>
+        <div class="wild-buttons">
+          <button type="button" data-color="red">Red</button>
+          <button type="button" data-color="yellow">Yellow</button>
+          <button type="button" data-color="green">Green</button>
+          <button type="button" data-color="blue">Blue</button>
+        </div>
+      </div>
+
+      <div id="round-overlay" role="dialog" aria-modal="true" aria-labelledby="round-message" hidden>
+        <p id="round-message">Round over.</p>
+        <button id="back-to-menu" type="button">Back to menu</button>
+      </div>
+    </section>
+  </main>
+
+  <p id="announcer" role="status" aria-live="polite" class="visually-hidden"></p>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
